@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package proto.kyc.v1;
+
+option go_package = "github.com/imkrish7/ecoship-api/gen/kyc/v1;kyc1";
+
+service KycService {
+    rpc CompleteKyc(CompleteKycRequest) returns (CompleteKycResponse){}
+    rpc UpdateKyc(UpdateKycRequest) returns (UpdateKycResponse) {}
+    rpc DeleteKyc(DeleteKycRequest) returns (DeleteKycResponse){}
+}
+
+message CompleteKycRequest {
+    string fullname = 1;
+    int64 age = 2;
+    string birth_date = 3;
+    string aadhar = 4;
+    string pan = 5;
+    string phone = 6;
+}
+
+message CompleteKycResponse {
+    bool status = 1;
+}
+
+message UpdateKycRequest {
+    string fullname = 1;
+    int64 age = 2;
+    string birth_date = 3;
+    string aadhar = 4;
+    string pan = 5;
+    string phone = 6;
+}
+
+message UpdateKycResponse {
+    bool status = 1;
+}
+
+message DeleteKycRequest {
+    string id = 1;
+}
+
+message DeleteKycResponse {
+    bool status = 1;
+}

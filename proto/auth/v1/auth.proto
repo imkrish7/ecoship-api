@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package proto.auth.v1;
+
+option go_package = "github.com/imkrish7/ecoship-api/gen/proto/auth/v1;authv1";
+
+service AuthService {
+    rpc LoginService(LoginServiceRequest) returns (LoginServiceResponse) {}
+    rpc SignupService(SignupServiceRequest) returns (SignupServiceResponse){}
+}
+
+message SignupServiceRequest {
+    string name = 1;
+    string email = 2;
+    string phone = 3;
+    string password = 4;
+    string type = 5;
+}
+
+message SignupServiceResponse {
+    bool status = 1;
+}
+
+
+
+message LoginServiceRequest {
+    string email = 1;
+    string password = 2;
+}
+
+message LoginServiceResponse {
+    bool status = 1;
+    string type = 2;
+    string next_step = 3;
+    string auth = 4;
+}

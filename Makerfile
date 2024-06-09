@@ -1,0 +1,16 @@
+PROJECT_NAME = ./build
+
+MAIN_PACKAGE = ./cmd/web
+
+all:build
+
+build:
+  go build -o $(PROJECT_NAME) $(MAIN_PACKAGE)
+
+clean:
+  rm -rf $(PROJECT_NAME)
+
+run:
+  ./$(PROJECT_NAME)
+
+.PHONY: all build clean
