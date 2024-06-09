@@ -1,0 +1,73 @@
+syntax="proto3";
+
+package product.v1;
+
+option go_package = "github.com/imkrish7/ecoship-api/gen/rpc/product/v1;productv1";
+
+service ProductService{
+    rpc CreateProduct(CreateProductRequest) returns (CreateProductResponse){}
+    rpc GetProductById(GetProductByIdRequest) returns (GetProductByIdResponse){}
+    rpc RemoveProductById(RemoveProductByIdRequest) returns (RemoveProductByIdResponse){}
+    rpc UpdateProductById(UpdateProductByIdRequest) returns (UpdateProductByIdResponse){}
+    rpc GetProducts(GetProductsRequest) returns (GetProductsResponse){} 
+}
+
+message CreateProductRequest {
+    string name = 1;
+    string description = 2;
+    int64 price = 3;
+    bool is_available = 4;
+    int64 stock = 5;
+    repeated string tags = 6;
+}
+
+message CreateProductResponse {
+    bool status = 1;
+}
+
+message GetProductByIdRequest {
+    string id = 1;
+}
+
+message GetProductByIdResponse {
+    bool status = 1;
+}
+
+message RemoveProductByIdRequest {
+    bool id = 1;
+}
+
+message RemoveProductByIdResponse {
+    bool status = 1;
+}
+
+message UpdateProductByIdRequest {
+    string name = 1;
+    string description = 2;
+    int64 price = 3;
+    bool is_available = 4;
+    int64 stock = 5;
+    repeated string tags = 6; 
+}
+
+message UpdateProductByIdResponse {
+    bool status = 1;
+}
+
+message GetProductsRequest {}
+
+message GetProductsResponse {
+    repeated Product products = 1;
+}
+
+message Product {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+    int64 price = 4;
+    bool is_available = 5;
+    int64 stock = 6;
+    repeated string tags = 7;
+    string created_at = 8;
+    string updated_at = 9; 
+}

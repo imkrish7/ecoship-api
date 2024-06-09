@@ -11,7 +11,7 @@ import (
 	"github.com/go-chi/render"
 	"github.com/imkrish7/ecoship-api/application"
 	"github.com/imkrish7/ecoship-api/controllers"
-	"github.com/imkrish7/ecoship-api/gen/proto/auth/v1/authv1connect"
+	"github.com/imkrish7/ecoship-api/gen/rpc/auth/v1/authv1connect"
 	repositories "github.com/imkrish7/ecoship-api/repositories/auth"
 )
 

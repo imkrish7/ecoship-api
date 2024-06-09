@@ -7,7 +7,7 @@ import (
 
 	"connectrpc.com/connect"
 	"github.com/imkrish7/ecoship-api/application"
-	authv1 "github.com/imkrish7/ecoship-api/gen/proto/auth/v1"
+	authv1 "github.com/imkrish7/ecoship-api/gen/rpc/auth/v1"
 	repositories "github.com/imkrish7/ecoship-api/repositories/auth"
 )
 
