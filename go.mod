@@ -12,6 +12,7 @@ require (
 require (
 	connectrpc.com/grpcreflect v1.2.0
 	github.com/ajg/form v1.5.1 // indirect
+	github.com/cristalhq/jwt/v5 v5.4.0
 	github.com/go-chi/cors v1.2.1
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
