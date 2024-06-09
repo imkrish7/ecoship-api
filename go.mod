@@ -3,6 +3,16 @@ module github.com/imkrish7/ecoship-api
 go 1.22.3
 
 require (
+	connectrpc.com/connect v1.16.2
+	github.com/go-chi/chi/v5 v5.0.12
+	github.com/go-chi/render v1.0.3
+	github.com/lib/pq v1.10.9
+)
+
+require (
+	connectrpc.com/grpcreflect v1.2.0
+	github.com/ajg/form v1.5.1 // indirect
+	github.com/go-chi/cors v1.2.1
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20231201235250-de7065d80cb9 // indirect
